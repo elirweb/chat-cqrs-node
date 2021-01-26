@@ -5,11 +5,11 @@ import { User } from "./User";
 
 @Entity()
 export class AddressContact extends Aggregation{
-    //
+    
    @Column()
    Neighborhood:string;
 
-   @Column()
+   @Column({length:10})
    ZipCode:string;
 
    @Column()
