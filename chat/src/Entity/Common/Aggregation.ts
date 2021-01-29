@@ -1,5 +1,5 @@
 import {Column, CreateDateColumn, Entity, JoinColumn, OneToOne, PrimaryGeneratedColumn} from "typeorm";
-import { Situation } from "./Situation";
+import { Situation } from "../Situation";
 
 @Entity()
 export abstract class Aggregation{
