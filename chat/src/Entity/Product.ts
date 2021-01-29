@@ -1,7 +1,6 @@
 import { Column, Entity, JoinColumn, OneToOne } from "typeorm";
+import { Aggregation } from "./Aggregation";
 import { Category } from "./Category";
-import { Aggregation } from "./Common/Aggregation";
-import { Situation } from "./Situation";
 
 @Entity()
 export class Product extends Aggregation {
@@ -24,11 +23,7 @@ export class Product extends Aggregation {
     Code: string;
 
     @OneToOne(() => Category)
-@JoinColumn()
-IdCategory: Category;
-
-   
-
-
+    @JoinColumn()
+    IdCategory: Category;
 
 }

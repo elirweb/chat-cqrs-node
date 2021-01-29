@@ -1,25 +1,25 @@
 import { Column, Entity, JoinColumn, OneToOne } from "typeorm";
-import { Aggregation } from "./Common/Aggregation";
+import { Aggregation } from "./Aggregation";
 import { Product } from "./Product";
-import { Request } from "./Request";
+import { RequestOrdem } from "./RequestOrdem";
 
 @Entity()
 export class OrderItem extends Aggregation {
-@Column()
-Quantity:number;
+    @Column()
+    Quantity: number;
 
-@Column()
-Price:number;
+    @Column()
+    Price: number;
 
-@Column()
-Invoice:string;
+    @Column()
+    Invoice: string;
 
-@OneToOne(() => Product)
-@JoinColumn()
-IdProduct: Product;
+    @OneToOne(() => Product)
+    @JoinColumn()
+    IdProduct: Product;
 
-@OneToOne(() => Request)
-@JoinColumn()
-IdRequest: Request;
+    @OneToOne(() => RequestOrdem)
+    @JoinColumn()
+    IdRequest: RequestOrdem;
 
 }

@@ -1,14 +1,16 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
-import { Aggregation } from "./Common/Aggregation";
+import {Column, Entity, PrimaryGeneratedColumn} from "typeorm";
+import { Aggregation } from "./Aggregation";
 
 @Entity()
-export class Profile extends Aggregation{
+export class Profile  {
+    
+    @PrimaryGeneratedColumn("uuid")
+    id:string;
 
     @Column()
     Name: string;
 
     @Column()
     Description: string;
-
 
 }

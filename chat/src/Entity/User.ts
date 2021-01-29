@@ -1,12 +1,10 @@
-import {Entity,  Column, JoinColumn, OneToOne} from "typeorm";
-import { Aggregation } from "./Common/Aggregation";
+import {Column, Entity, JoinColumn, OneToOne} from "typeorm";
+import { Aggregation } from "./Aggregation";
 import { Profile } from "./Profile";
 import { Sex } from "./Sex";
-import { Situation } from "./Situation";
 
 @Entity()
 export class User extends Aggregation {
-  
     @Column()
     Name: string;
 
@@ -18,9 +16,7 @@ export class User extends Aggregation {
 
     @Column()
     Document: string;
-    
-    
-
+   
     @Column()
     Photo: string;
 
@@ -33,14 +29,9 @@ export class User extends Aggregation {
     
     @Column()
     Mail2: string;
-
-   
-
-   
+    
     @OneToOne(() => Profile)
     @JoinColumn()
     IdProfile: Profile;
-    
-    
 
 }

@@ -1,11 +1,11 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import {Column, CreateDateColumn, Entity, PrimaryGeneratedColumn} from "typeorm";
 
 @Entity()
 export class Logger {
-
     @PrimaryGeneratedColumn("uuid")
     id: string;
-    @Column()
+    
+    @CreateDateColumn()
     DateLogger: Date;
 
     @Column()

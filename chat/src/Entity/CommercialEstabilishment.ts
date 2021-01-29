@@ -1,10 +1,10 @@
-import { Column, Entity, JoinColumn, OneToOne } from "typeorm";
-import { Aggregation } from "./Common/Aggregation";
-
+import {Column, Entity, JoinColumn, OneToOne} from "typeorm";
+import { Aggregation } from "./Aggregation";
 import { User } from "./User";
 
 @Entity()
-export class CommercialEstabilishment extends Aggregation{
+export class CommercialEstabilishment extends Aggregation {
+    
 @Column()
 TraddingName:string;
 
@@ -23,7 +23,6 @@ Photo:string;
 @OneToOne(() => User)
 @JoinColumn()
 IdUser: User;
-
 
 
 }

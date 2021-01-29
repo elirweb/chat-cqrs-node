@@ -1,11 +1,9 @@
-import { EIDRM } from "constants";
-import { Column, Entity } from "typeorm";
-import { Aggregation } from "./Common/Aggregation";
+import {Column, Entity} from "typeorm";
+import { Aggregation } from "./Aggregation";
 
 @Entity()
 export class Category extends Aggregation {
-@Column()
-Name: string;
-
-
+    
+    @Column()
+    Name: string;
 }

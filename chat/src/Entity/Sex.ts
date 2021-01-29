@@ -1,8 +1,11 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
-import { Aggregation } from "./Common/Aggregation";
+import {Column, Entity, PrimaryGeneratedColumn} from "typeorm";
 
 @Entity()
-export class Sex extends Aggregation{
+export class Sex  {
+
+    @PrimaryGeneratedColumn("uuid")
+    id:string;
+    
     @Column()
     Name: string;
 

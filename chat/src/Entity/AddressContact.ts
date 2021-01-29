@@ -1,15 +1,17 @@
-import { Column, Entity, JoinColumn, OneToOne } from "typeorm";
+import {Column, Entity, JoinColumn, OneToOne, PrimaryGeneratedColumn} from "typeorm";
 import { CommercialEstabilishment } from "./CommercialEstabilishment";
-import { Aggregation } from "./Common/Aggregation";
 import { User } from "./User";
 
 @Entity()
-export class AddressContact extends Aggregation{
+export class AddressContact  {
+
+    @PrimaryGeneratedColumn("uuid")
+    id:string;
     
-   @Column()
+    @Column()
    Neighborhood:string;
 
-   @Column({length:10})
+   @Column()
    ZipCode:string;
 
    @Column()
@@ -38,4 +40,3 @@ export class AddressContact extends Aggregation{
 
 
 }
-

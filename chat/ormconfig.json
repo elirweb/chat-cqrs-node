@@ -1,0 +1,28 @@
+{
+   "type": "mssql",
+   "host": "LAPTOP-PQH9GV4C",
+   "port":1433,
+   "username": "sa",
+   "password": "elirweb",
+   "database": "ChatCQRS",
+   "dialect": "mssql",
+   "dialectOptions": {
+       "instanceName": "SQLEXPRESS"
+   },
+   "synchronize": true,
+   "logging": false,
+   "entities": [
+      "src/Entity/**/*.ts"
+   ],
+   "migrations": [
+      "src/Migration/**/*.ts"
+   ],
+   "subscribers": [
+      "src/subscriber/**/*.ts"
+   ],
+   "cli": {
+      "entitiesDir": "src/Entity",
+      "migrationsDir": "src/Migration",
+      "subscribersDir": "src/subscriber"
+   }
+}

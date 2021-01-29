@@ -1,8 +1,9 @@
-import { Column, JoinColumn, OneToOne, PrimaryGeneratedColumn, Timestamp } from "typeorm";
-import { Situation } from "../Situation";
-import "reflect-metadata";
+import {Column, CreateDateColumn, Entity, JoinColumn, OneToOne, PrimaryGeneratedColumn} from "typeorm";
+import { Situation } from "./Situation";
 
+@Entity()
 export abstract class Aggregation{
+
     @PrimaryGeneratedColumn("uuid")
     id:string;
 
@@ -10,10 +11,10 @@ export abstract class Aggregation{
     @JoinColumn()
     IdSituation: Situation;
 
-    @Column()
+    @CreateDateColumn()
     CreateDate: Date;
 
-    @Column()
+    @CreateDateColumn()
     ModifyDate: Date;
 
     @Column()
