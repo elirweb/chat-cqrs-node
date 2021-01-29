@@ -1,5 +1,5 @@
 import {Column, Entity, JoinColumn, OneToOne} from "typeorm";
-import { Aggregation } from "./Aggregation";
+import { Aggregation } from "./Common/Aggregation";
 import { Profile } from "./Profile";
 import { Sex } from "./Sex";
 

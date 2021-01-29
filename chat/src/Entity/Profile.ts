@@ -1,5 +1,5 @@
 import {Column, Entity, PrimaryGeneratedColumn} from "typeorm";
-import { Aggregation } from "./Aggregation";
+import { Aggregation } from "./Common/Aggregation";
 
 @Entity()
 export class Profile  {

@@ -3,7 +3,7 @@ import { CommercialEstabilishment } from "./CommercialEstabilishment";
 import { User } from "./User";
 
 @Entity()
-export class AddressContact  {
+export class AddressContact   {
 
     @PrimaryGeneratedColumn("uuid")
     id:string;
