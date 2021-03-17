@@ -1,20 +1,14 @@
-import {Column, CreateDateColumn, Entity, JoinColumn, OneToOne, PrimaryGeneratedColumn} from "typeorm";
-import { Situation } from "../Situation";
+import { Column, CreateDateColumn, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
+import "reflect-metadata";
 
-@Entity()
 export abstract class Aggregation{
-
     @PrimaryGeneratedColumn("uuid")
     id:string;
 
-    @OneToOne(() => Situation)
-    @JoinColumn()
-    IdSituation: Situation;
-
-    @CreateDateColumn()
+    @CreateDateColumn({name: 'createad_at'})
     CreateDate: Date;
 
-    @CreateDateColumn()
+    @UpdateDateColumn({name:'update_at'})
     ModifyDate: Date;
 
     @Column()

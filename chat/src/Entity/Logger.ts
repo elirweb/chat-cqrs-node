@@ -1,11 +1,10 @@
-import {Column, CreateDateColumn, Entity, PrimaryGeneratedColumn} from "typeorm";
+import { Column, CreateDateColumn, Entity } from "typeorm";
+import { Aggregation } from "./Common/Aggregation";
 
 @Entity()
-export class Logger {
-    @PrimaryGeneratedColumn("uuid")
-    id: string;
-    
-    @CreateDateColumn()
+export class Logger extends Aggregation {
+
+    @CreateDateColumn({name: 'logger_date'})
     DateLogger: Date;
 
     @Column()

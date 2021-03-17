@@ -10,6 +10,8 @@
        "instanceName": "SQLEXPRESS"
    },
    "synchronize": true,
+   "autoSchemaSync": false,
+   "autoMigrationsRun": true,
    "logging": false,
    "entities": [
       "src/Entity/**/*.ts"

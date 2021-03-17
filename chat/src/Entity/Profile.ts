@@ -1,16 +1,21 @@
-import {Column, Entity, PrimaryGeneratedColumn} from "typeorm";
-import { Aggregation } from "./Common/Aggregation";
+import {Column, Entity, OneToOne, PrimaryGeneratedColumn} from "typeorm";
+import User from "./User";
 
 @Entity()
-export class Profile  {
+export   class Profile  {
     
-    @PrimaryGeneratedColumn("uuid")
-    id:string;
+    @PrimaryGeneratedColumn()
+    id:number;
 
     @Column()
     Name: string;
 
     @Column()
     Description: string;
+
+    @OneToOne(() => User, user => user.profile) 
+    user: User;
+
+  
 
 }

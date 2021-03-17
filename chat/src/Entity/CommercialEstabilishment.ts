@@ -1,28 +1,32 @@
-import {Column, Entity, JoinColumn, OneToOne} from "typeorm";
+import { Column, Entity, OneToOne } from "typeorm";
+import { AddressContact } from "./AddressContact";
 import { Aggregation } from "./Common/Aggregation";
-import { User } from "./User";
+import { Segment } from "./Segment";
 
 @Entity()
 export class CommercialEstabilishment extends Aggregation {
-    
-@Column()
-TraddingName:string;
+    @Column()
+    TraddingName: string;
 
-@Column()
-Document:string;
+    @Column()
+    Document: string;
 
-@Column()
-Mail:string;
+    @Column()
+    Mail: string;
 
-@Column()
-Mail2:string;
+    @Column()
+    Mail2: string;
 
-@Column()
-Photo:string;
+    @Column()
+    Photo: string;
 
-@OneToOne(() => User)
-@JoinColumn()
-IdUser: User;
+    @OneToOne(() => AddressContact, contact => contact.commercial)
+    contact: AddressContact;
+
+    @OneToOne(() => Segment, seg => seg.commercial)
+    segment: Segment;
+
+
 
 
 }
