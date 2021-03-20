@@ -27,17 +27,4 @@ jobs:
      - uses: eslint/github-action@v0
 
  
-    needs: deploy-dev
-    steps:
-      - name: Run a one-line script
-        run: echo Deploy test
-        
-  deploy-prd:
-    runs-on: ubuntu-latest
-    environment: 
-      name: prd
-      url: 'https://github.com/elirweb'
-    needs: deploy-test
-    steps:
-      - name: Run a one-line script
-        run: echo Deploy prd
+  
