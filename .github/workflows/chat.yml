@@ -19,12 +19,12 @@ jobs:
 
 # create firts steps 
     steps:
-     - uses: actions/checkout@v2 
+     - run: actions/checkout@v2 
      - with: 
         check-latest: true
      - run: npm install
      
-     - uses: eslint/github-action@v0
+     - run: eslint/github-action@v0
 
  
   
