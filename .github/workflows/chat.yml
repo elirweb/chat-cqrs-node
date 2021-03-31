@@ -17,14 +17,5 @@ jobs:
    
     runs-on: ubuntu-latest
 
-# create firts steps 
-    steps:
-     - run: actions/checkout@v1 
-     - with: 
-        check-latest: true
-     - run: npm install
-     
-     - run: eslint/github-action@v0
-
  
   
