@@ -3,9 +3,9 @@ name: Chat-CI/CD
 
 on:
   push:
-    branches: [develop]
+    branches: develop
   pull_request:
-        branches: [ master ]
+        branches: master
 
  
   workflow_dispatch:
@@ -19,7 +19,7 @@ jobs:
 
 # create firts steps 
     steps:
-     - run: actions/checkout@v2 
+     - run: actions/checkout@v1 
      - with: 
         check-latest: true
      - run: npm install
