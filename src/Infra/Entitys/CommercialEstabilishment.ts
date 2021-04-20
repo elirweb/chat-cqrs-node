@@ -25,8 +25,4 @@ export class CommercialEstabilishment extends Aggregation {
 
     @OneToOne(() => Segment, seg => seg.commercial)
     segment: Segment;
-
-
-
-
 }

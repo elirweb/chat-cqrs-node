@@ -13,6 +13,8 @@ export abstract class Aggregation{
 
     @Column()
     Hours: string;
-    //atualizando
+
+    @Column()
+    Status:number;
 
 }
